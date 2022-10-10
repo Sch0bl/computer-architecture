@@ -1,10 +1,10 @@
-.text
+.global fact1
 
-fact:
+fact1:
 	cmpq $0, %rdi
 	jz base_fact
 	subq $1, %rdi
-	call fact
+	call fact1
 	addq $1, %rdi
 	mulq %rdi
 	ret
@@ -12,10 +12,3 @@ fact:
 base_fact:
 	movl $1, %eax
 	ret
-
-.global main
-
-main:
-	call fact
-	ret
-	

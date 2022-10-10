@@ -1,6 +1,5 @@
-.text
-
-fact:
+.global fact2
+fact2:
 	movq %rdi, %rcx
 	movl $1, %eax
 	cmpq $0, %rcx
@@ -11,8 +10,8 @@ fact:
 	ret:
 		ret
 
-.global main
 
-main:
-	call fact
-	ret
+
+
+
+
